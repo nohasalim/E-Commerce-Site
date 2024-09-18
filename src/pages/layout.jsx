@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "node_modules/react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb"; // Import the Breadcrumbs component
 
 function Layout() {

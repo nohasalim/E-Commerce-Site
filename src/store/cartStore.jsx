@@ -1,4 +1,4 @@
-import {create} from "node_modules/zustand";
+import {create} from "zustand";
 const useCartStore = create((set, get) => ({
   cart: [],
   cartCount: 0,

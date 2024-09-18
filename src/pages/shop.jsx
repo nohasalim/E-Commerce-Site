@@ -1,7 +1,7 @@
-import { useState, useEffect } from "node_modules/react";
-import { Link } from "node_modules/react-router-dom";
-import { ToastContainer, toast } from "node_modules/react-toastify";
-import "node_modules/react-toastify/dist/ReactToastify.css";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import useCartStore from "../store/cartStore";
 import Pagination from "../components/Pagination/Pagination"; // Import the Pagination component
 

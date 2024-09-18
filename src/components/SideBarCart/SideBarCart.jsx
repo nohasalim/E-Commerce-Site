@@ -1,7 +1,7 @@
-import { useState } from "node_modules/react";
+import { useState } from "react";
 import "./SideBarCart.css";
 import useCartStore from "../../store/cartStore";
-import { Link } from "node_modules/react-router-dom";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 function SideBarCart({ closeSidebar }) {

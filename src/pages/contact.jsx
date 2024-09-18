@@ -1,5 +1,5 @@
-import { useState } from "node_modules/react";
-import * as yup from "node_modules/yup";
+import { useState } from "react";
+import * as yup from "yup";
 function Contact() {
   const [errorsObject, setErrorsObject] = useState({});
   const [formData, setFormData] = useState(

@@ -1,5 +1,5 @@
-import { useState } from "node_modules/react";
-import { NavLink } from "node_modules/react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import useCartStore from "../../store/cartStore";
 
 import "./NavBar.css";

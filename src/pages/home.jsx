@@ -1,4 +1,4 @@
-import { Link } from "node_modules/react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (

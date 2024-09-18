@@ -1,8 +1,8 @@
-import { useState, useEffect } from "node_modules/react";
-import { Link } from "node_modules/react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 import Pagination from "../components/Pagination/Pagination"; // Import the Pagination component
-import { ToastContainer, toast } from "node_modules/react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Electronics() {
