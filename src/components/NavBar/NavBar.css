@@ -1,0 +1,150 @@
+/* NavBar.css */
+/*navbar style*/
+
+.navbar,
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  margin: 0px;
+  height: 80px;
+}
+.logo img{
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+.navbar .active {
+  color:rgb(224, 159, 73);;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size:xx-large;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+}
+.navbar a:hover{
+  color:rgb(224, 159, 73);;
+}
+.cart-button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.cart-counter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(224, 159, 73);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .navbar-links {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color:black;
+    font-size:xx-large;
+  }
+  .homediv{
+    display: none;
+  }
+  
+  .toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color:rgb(224, 159, 73); 
+    margin: 4px 0;
+  }
+  .close-nav {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color:rgb(224, 159, 73); 
+    cursor: pointer;
+  }
+  .close-nav:hover{
+    color: aliceblue;
+    background-color:rgb(224, 159, 73); 
+
+  }
+  @media (max-width: 600px) {
+    .toggle-button {
+      display: flex;
+    }
+    .close-nav {
+        display:block;
+      }
+    .homediv{
+        display:flex;
+        align-items: center;
+      }
+  
+    .navbar-links {
+      position:fixed;
+      left: -300px;
+      top:0px;
+      width: 300px;;
+      height: 100%;
+      flex-direction: column;
+      align-items:center;
+      padding: 20px;
+      transition: left 0.3s;
+      z-index: 1000;
+      background-color:white;
+    }
+  
+    .navbar-links.active {
+      left: 0;
+    }
+  
+    .navbar-links a {
+    
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

@@ -1,0 +1,35 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 20px ;
+    background-color: rgb(238, 226, 210);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    font-size: x-large;
+  }
+  
+  .breadcrumb-item {
+    margin-right: 10px;
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color:black;
+  }
+  
+  .breadcrumb-item.active {
+    color: rgb(224, 159, 73);
+}
+  
+  .breadcrumb-item::after {
+    content: ">";
+    margin-left: 10px;
+    color: #6c757d;
+  }
+  
+  .breadcrumb-item:last-child::after {
+    content: "";
+  }
+  

@@ -1,0 +1,437 @@
+/* layout page style*/
+
+
+
+
+/*banner style*/
+.banner-img img {
+  width: 100%;
+  height: 300px;
+}
+/*page section style*/
+.page-section {
+  width: 100%;
+  height: auto;
+ 
+}
+/* shop information style*/
+.shop-information {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(238, 226, 210);
+  display: flex;
+}
+.shop-information div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-information div img {
+  width: 60%;
+}
+/*footer style*/
+footer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto;
+  height:500px;
+  gap:8%;
+  padding: 10px;
+
+}
+footer label {
+  color: gray;
+  font-size: larger;
+  margin-bottom: 20px;
+  height: 50%;
+}
+footer a {
+  text-decoration: none;
+  font-size: larger;
+  color: black;
+  cursor: pointer;
+}
+footer a:hover {
+  color:brown;
+}
+footer div {
+  margin-top: 20px;
+  height: 50%;
+
+}
+footer div input,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+}
+footer div button:hover{
+  color: #c82333;
+  background-color: antiquewhite;
+}
+.copyRights{
+  width: 100%;
+  border-top: 1px solid gray ;
+  font-size: large;
+  margin: 10px;
+  padding: 10px;
+  position:relative;
+  bottom: 0px;
+}
+/* contact page style*/
+
+.contactPage {
+  padding: 20px;
+  height: 700px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  
+}
+.contactPage h1{
+  font-size: xx-large;
+}
+.contactPage h3{
+  font-size: x-large;
+}
+.contactPage p{
+  font-size: larger;
+}
+.contactPage .getUsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactPage .contactDiv {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 45% 45%;
+  box-sizing: border-box;
+  padding: 20px;
+  gap:10%
+}
+.contactPage .contactDiv .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.contactPage .contactDiv .contactInfo .icon {
+  display: flex;
+justify-content: center;}
+
+
+.contactPage .contactDiv .userForm{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    gap:5px;
+}
+.contactPage .contactDiv .userForm input,textarea{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.contactPage .contactDiv .userForm button{
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(245, 202, 147);
+
+    color: aliceblue;
+    font-size: large;
+    width: 50%;
+}
+.contactPage .contactDiv .userForm button:hover{
+  background-color: rgb(224, 159, 73);
+
+}
+
+.contactPage .contactDiv .userForm .error{
+    color: red;
+}
+  /* Home page style*/
+.homePage{
+  height: 500px;
+  padding: 40px;
+}
+.homePage .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+.homePage .title label{
+  font-size: xx-large;
+  font-weight: bolder;
+  padding: 20px;
+}
+.homePage .categories{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+
+}
+.homePage .categories :hover{
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+.homePage .categories div{
+  width: 100%;
+  text-align: center;
+  font-size: larger;
+
+}
+.homePage .categories div img{
+  width: 60%;
+  height: 70%;
+}
+.homePage .categories  a{
+  text-decoration: none;
+  color: gray;
+}
+  /* Shop page style*/
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.product a{
+  text-decoration: none;
+  color: #000;
+}
+.product a:hover{
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  max-height: 450px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 80%;
+  height:180px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+ .product .actions {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.actions input{
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+ .actions button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(245, 202, 147);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.actions button:hover {
+  background-color: rgb(224, 159, 73);
+}
+
+  /* ProductDetails page style*/
+
+.product-detail {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+}
+.product-detail .actions{
+  display: flex;
+  flex-direction: row;
+}
+.product-detail .actions input{
+  padding: 5px;
+}
+.product-detail div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.product-detail div img{
+  width: 50%;
+}
+.product-detail div button{
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(245, 202, 147);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.product-detail div button:hover {
+  background-color: rgb(224, 159, 73);
+}
+ /*css for the overlay*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.sidebar {
+  z-index: 1001; /* Ensure it is above the overlay */
+}
+
+
+  /* Media Query Responsive style*/
+
+@media only screen and (max-width: 900px) {
+  /* layout page style*/
+
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 1000px;
+    gap: 50px;
+    padding: 10px;
+  }
+  .copyRight{
+    width: 100%;
+    background-color:transparent;
+    padding: 20px;
+    position:relative;
+    bottom: 0px;
+  }
+  .shop-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+  }
+  .shop-information div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* contact page style*/
+  .contactPage{
+    height: auto;
+  }
+  .contactPage .contactDiv {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  
+
+}
+
+.contactPage .contactDiv .userForm{
+  width:100%;
+
+}
+  /* Home page style*/
+  .homePage{
+    height:700px;
+  }
+  .homePage .title{
+    height: 10%;
+  }
+  
+.homePage .categories{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ padding: 20px;
+}
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  /* layout page style*/
+  
+  .shop-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+  }
+  .shop-information div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* contact page style*/
+  /* Home page style*/
+  .homePage{
+    height:1500px;
+    padding: 20px;
+  }
+  .homePage .title{
+    height: 10%;
+  }
+.homePage .categories{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+ height: 90%;
+}
+.product {
+  display:flex;
+  flex-direction: column;
+ 
+}
+  /* ProductDetails page style*/
+  .product-detail {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  
+  }
+
+}
