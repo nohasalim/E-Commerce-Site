@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "node_modules/react";
+import { useParams } from "node_modules/react-router-dom";
 import useCartStore from "../store/cartStore";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "node_modules/react-toastify";
+import "node_modules/react-toastify/dist/ReactToastify.css";
 
 function ProductDetail() {
   const { id } = useParams();

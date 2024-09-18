@@ -1,5 +1,5 @@
 import useCartStore from "../../store/cartStore";
-import { Link } from "react-router-dom";
+import { Link } from "node_modules/react-router-dom";
 
 import "./CartPage.css";
 function CartPage() {
