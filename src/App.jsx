@@ -30,15 +30,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} /> {/* Default route */}
-          <Route path="home" element={<Home />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="cartpage" element={<CartPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cartpage" element={<CartPage />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="shop/jewellery" element={<Jewellery />} />
-          <Route path="shop/electronics" element={<Electronics />} />
-          <Route path="shop/men-clothing" element={<MenClothing />} />
-          <Route path="shop/women-clothing" element={<WomenClothing />} />
+          <Route path="/shop/jewellery" element={<Jewellery />} />
+          <Route path="/shop/electronics" element={<Electronics />} />
+          <Route path="/shop/men-clothing" element={<MenClothing />} />
+          <Route path="/shop/women-clothing" element={<WomenClothing />} />
         </Route>
       </Routes>
     </BrowserRouter>
