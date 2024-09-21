@@ -240,7 +240,7 @@ textarea {
 
 .product {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
   align-items: center;
@@ -258,7 +258,7 @@ textarea {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  width: 300px;
   max-height: 450px;
   padding: 20px;
   background-color: #fff;
