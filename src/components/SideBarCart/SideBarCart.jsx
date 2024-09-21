@@ -29,7 +29,7 @@ function SideBarCart({ closeSidebar }) {
       <button className="close-shopping-cart" onClick={handleCloseSidebar}>
         ×
       </button>
-      <h2>Shopping Cart</h2>
+      <h2 className="cart-header">Shopping Cart</h2>
 
       {cart.length === 0 ? (
         <div className="empty-cart-Img">

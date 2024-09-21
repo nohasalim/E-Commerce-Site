@@ -106,7 +106,7 @@ function Contact() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="form-div">
             <form onSubmit={handelFormOnSubmit}>
               <div className="userForm">
                 <label htmlFor="firstName">Your name</label>

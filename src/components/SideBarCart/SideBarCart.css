@@ -12,11 +12,12 @@
     
   }
   
-  .sidebar h2 {
-    color: rgb(224, 159, 73);
-    margin-top: 0;
-    padding: 20px;
+  .sidebar .cart-header {
+    color:black;
     border-bottom: 1px solid gray;
+    font-size:30px;
+    margin-top: 0;
+    padding: 15px;
   }
   .empty-cart-Img img{
     width: 100%;
@@ -98,8 +99,8 @@
     background-color: rgb(224, 159, 73);
     color: aliceblue;
   }
-  .sidebar-footer{
-    margin-bottom: 50px;
+  .sidebar-footer span{
+    color: rgb(224, 159, 73);
   }
   
   
