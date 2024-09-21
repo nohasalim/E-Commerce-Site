@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      
+      <div className="homebanner">
+      <img  src="/images/banner1.png" alt="Banner" />
+
+      </div>
       <section className="homePage">
+      
         <div className="title">
           <label>Categories</label>
         </div>

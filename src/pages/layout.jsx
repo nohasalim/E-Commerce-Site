@@ -1,14 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Breadcrumbs from "../components/Breadcrumb/Breadcrumb"; // Import the Breadcrumbs component
 
 function Layout() {
   
   return (
     <main>
-      <div className="banner-img">
-        <img src="/images/banner.jpeg" alt="Banner" />
-      </div>
-      <Breadcrumbs /> {/* Add Breadcrumbs component here */}
+      
 
       <section className="page-section">
         <Outlet />

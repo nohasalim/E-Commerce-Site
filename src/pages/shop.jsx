@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useCartStore from "../store/cartStore";
 import Pagination from "../components/Pagination/Pagination"; // Import the Pagination component
+import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -58,7 +59,17 @@ function Shop() {
 
   return (
     <>
-      
+      <div className="banner-container">
+        <img className="banner-img" src="/images/banner2.png" alt="Banner" />
+        <div className="banner-title">
+          <img src="/images/Logo.png" alt="Logo" />
+          <p>Shop</p> {/* Title added here */}
+        </div>
+        <div className="breadcrumb">
+          <Breadcrumbs />
+          {/* Add Breadcrumbs component here */}
+        </div>
+      </div>
       <div className="shop-page">
         <div className="product">
           {currentProducts.map((product) => (

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 
 function ProductDetail() {
   const { id } = useParams();
@@ -59,7 +60,12 @@ function ProductDetail() {
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  return (
+  return (<>
+  <div className="banner-container">
+    <img className="banner-img" src="/images/banner2.png" alt="Banner" />
+    <Breadcrumbs/>{/* Add Breadcrumbs component here */}
+
+    </div>
     <div className="product-detail">
       <div>
         <img src={product.image} alt={product.title} />
@@ -81,7 +87,8 @@ function ProductDetail() {
         </div>
       </div>
       <ToastContainer />
-    </div>
+    </div></>
+    
   );
 }
 

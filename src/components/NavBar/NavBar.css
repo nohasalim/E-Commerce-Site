@@ -2,14 +2,15 @@
 /*navbar style*/
 
 .navbar,
-.logo {
+.logo ,.navbar-links{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:space-between;
   box-sizing: border-box;
   padding: 0px 20px;
   margin: 0px;
   height: 80px;
+  width:100%;
 }
 .logo img{
   width: 50px;
@@ -22,7 +23,7 @@
 .navbar a {
   text-decoration: none;
   color: black;
-  font-size:xx-large;
+  font-size:x-large;
   cursor: pointer;
   padding: 5px;
   border-radius: 10px;
@@ -58,27 +59,8 @@
   align-items: center;
   justify-content: center;
 }
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-  }
-  
-  .navbar-links {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color:black;
-    font-size:xx-large;
-  }
-  .homediv{
+
+  .homediv,.cartdiv{
     display: none;
   }
   
@@ -91,7 +73,7 @@
   .toggle-button .bar {
     width: 25px;
     height: 3px;
-    background-color:rgb(224, 159, 73); 
+    background-color:black; 
     margin: 4px 0;
   }
   .close-nav {
@@ -117,7 +99,7 @@
     .close-nav {
         display:block;
       }
-    .homediv{
+    .homediv ,.cartdiv{
         display:flex;
         align-items: center;
       }

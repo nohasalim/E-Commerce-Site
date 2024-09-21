@@ -4,6 +4,7 @@ import useCartStore from "../store/cartStore";
 import Pagination from "../components/Pagination/Pagination"; // Import the Pagination component
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
 function WomenClothing() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -72,7 +73,11 @@ function WomenClothing() {
 
   return (
     <>
-      
+       <div className="banner-container">
+      <img className="banner-img" src="/images/banner2.png" alt="Banner" />
+      <Breadcrumbs/>{/* Add Breadcrumbs component here */}
+
+      </div>
       <div className="shop-page">
         <div className="product">
           {currentProducts.map((product) => (

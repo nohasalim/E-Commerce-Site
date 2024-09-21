@@ -1,35 +1,37 @@
 .breadcrumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 20px ;
-    background-color: rgb(238, 226, 210);
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-    font-size: x-large;
-  }
-  
-  .breadcrumb-item {
-    margin-right: 10px;
-  }
-  
-  .breadcrumb-item a {
-    text-decoration: none;
-    color:black;
-  }
-  
-  .breadcrumb-item.active {
-    color: rgb(224, 159, 73);
+  position: relative;
+  z-index: 1; /* Ensure breadcrumbs are above the banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: x-large;
+  height: 300px;
 }
-  
-  .breadcrumb-item::after {
-    content: ">";
-    margin-left: 10px;
-    color: #6c757d;
-  }
-  
-  .breadcrumb-item:last-child::after {
-    content: "";
-  }
-  
+
+.breadcrumb-item {
+  margin-right: 10px;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumb-item.active {
+  color: rgb(224, 159, 73);
+}
+
+.breadcrumb-item::after {
+  content: ">";
+  margin-left: 10px;
+  color: #6c757d;
+}
+
+.breadcrumb-item:last-child::after {
+  content: "";
+}
