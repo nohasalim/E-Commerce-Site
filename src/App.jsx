@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 import "./App.css";
 import Layout from "./pages/layout";
@@ -12,25 +11,14 @@ import Electronics from "./pages/electronics";
 import MenClothing from "./pages/men-clothing";
 import WomenClothing from "./pages/women-clothing";
 import CartPage from "./components/CartPage/CartPage";
-import NavBar from "./components/NavBar/NavBar";
-import SideBarCart from "./components/SideBarCart/SideBarCart";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   return (
     <BrowserRouter>
-      <NavBar toggleSidebar={toggleSidebar} />
-      {isSidebarOpen && <div className="overlay" onClick={toggleSidebar}></div>}
-      {isSidebarOpen && <SideBarCart closeSidebar={toggleSidebar} />}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} /> {/* Default route */}
-          <Route path="/home"  element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cartpage" element={<CartPage />} />
