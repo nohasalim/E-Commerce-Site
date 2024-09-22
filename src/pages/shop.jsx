@@ -77,7 +77,7 @@ function Shop() {
               <Link to={`/product/${product.id}`}>
                 <img src={product.image} alt={product.title} />
                 <h4>{product.title}</h4>
-                <p>{`Rp ${product.price.toLocaleString("id-ID")}`}</p>
+                <p>{`$ ${product.price.toLocaleString("id-ID")}`}</p>
               </Link>
               <div className="actions">
                 <input

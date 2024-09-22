@@ -48,7 +48,7 @@ function SideBarCart({ closeSidebar }) {
                   <h5>{item.title}</h5>
                 </div>
                 <div>
-                  <p>{`Rp ${item.price.toLocaleString("id-ID")}`}</p>
+                  <p>{`$ ${item.price.toLocaleString("id-ID")}`}</p>
                 </div>
                 <div>
                   <input
@@ -66,7 +66,7 @@ function SideBarCart({ closeSidebar }) {
           </div>
           <div className="sidebar-footer">
             <h2>
-              Total :<span>{` Rp ${displayTotal.toLocaleString("id-ID")}`}</span>
+              Total :<span>{` $ ${displayTotal.toLocaleString("id-ID")}`}</span>
             </h2>
 
             <Link to="/cartpage"  onClick={handleCloseSidebar}>

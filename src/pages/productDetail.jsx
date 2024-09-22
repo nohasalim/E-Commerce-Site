@@ -73,7 +73,7 @@ function ProductDetail() {
       <div>
         <h3>{product.title}</h3>
         <h3>Category: <span>{product.category}</span></h3>
-        <p>{`Price: Rp ${product.price.toLocaleString("id-ID")}`}</p>
+        <p>{`Price: $ ${product.price.toLocaleString("id-ID")}`}</p>
         <h3>Description:</h3>
         <p>{product.description}</p>
         <div className="actions">
