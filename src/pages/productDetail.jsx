@@ -71,10 +71,10 @@ function ProductDetail() {
         <Breadcrumbs />
       </div>
       <div className="product-detail">
-        <div>
+        <div className="content">
           <img src={product.image} alt={product.title} />
         </div>
-        <div>
+        <div className="content">
           <h3>{product.title}</h3>
           <h3>
             Category: <span>{product.category}</span>

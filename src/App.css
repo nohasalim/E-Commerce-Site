@@ -329,6 +329,12 @@ textarea {
 .product-detail div button:hover {
   background-color: rgb(224, 159, 73);
 }
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /*css for the overlay*/
 .overlay {
   position: fixed;
@@ -434,16 +440,15 @@ textarea {
     grid-template-columns: repeat(1, 1fr);
     height: 90%;
   }
-  .product {
+  .product{
     display: flex;
     flex-direction: column;
+    
   }
   /* ProductDetails page style*/
   .product-detail {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    flex-direction: column;
     padding: 20px;
   }
 }
