@@ -117,9 +117,9 @@
   
     .navbar-links {
       position:fixed;
-      left: -100%;
+      left: -70%;
       top:0px;
-      width:100%;
+      width:70%;
       height: 100%;
       flex-direction: column;
       justify-content:start;
