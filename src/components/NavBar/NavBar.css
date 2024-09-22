@@ -2,7 +2,7 @@
 /*navbar style*/
 
 .navbar,
-.logo ,.navbar-links{
+.logo ,.navbar-links,.logo-div{
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -11,6 +11,9 @@
   margin: 0px;
   height: 80px;
   width:100%;
+}
+.logo-div h1{
+  font-size: xx-large;
 }
 .navbar{
   position: fixed;
