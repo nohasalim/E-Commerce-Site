@@ -1,14 +1,16 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { HashLink as NavLink } from 'react-router-hash-link';
+import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
 import SideBarCart from "../components/SideBarCart/SideBarCart";
 import { useState } from "react";
+
 function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  
+
   return (
     <main>
       <NavBar toggleSidebar={toggleSidebar} />
@@ -44,25 +46,25 @@ function Layout() {
         <div>
           <label>Links</label>
           <div>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink smooth to="#home">Home</NavLink>
           </div>
           <div>
-            <NavLink to="/shop">Shop</NavLink>
+            <NavLink smooth to="#shop">Shop</NavLink>
           </div>
           <div>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink smooth to="#contact">Contact</NavLink>
           </div>
         </div>
         <div>
           <label>Help</label>
           <div>
-            <NavLink to="#">Payment Options</NavLink>
+            <NavLink smooth to="#payment-options">Payment Options</NavLink>
           </div>
           <div>
-            <NavLink to="#">Returns</NavLink>
+            <NavLink smooth to="#returns">Returns</NavLink>
           </div>
           <div>
-            <NavLink to="#">Privacy Policies</NavLink>
+            <NavLink smooth to="#privacy-policies">Privacy Policies</NavLink>
           </div>
         </div>
         <div>

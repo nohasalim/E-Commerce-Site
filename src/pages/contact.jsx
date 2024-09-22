@@ -57,7 +57,7 @@ function Contact() {
 
   return (
     <>
-      <div className="banner-container">
+      <div className="banner-container"id="contact" >
         <img className="banner-img" src="/images/banner2.png" alt="Banner" />
         <div className="banner-title">
           <img src="/images/Logo.png" alt="Logo" />
@@ -91,7 +91,7 @@ function Contact() {
               <h3>Phone</h3>
 
               <p>
-                Mobile: +(84) 546-6789 <br />
+                Mobile: +(84) 546-6789 <br/>
                 Hotline: +(84) 456-6789
               </p>
             </div>

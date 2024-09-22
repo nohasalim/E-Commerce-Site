@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <>
-      <div className="homebanner">
-      <img  src="/images/banner1.png" alt="Banner" />
-
+    <section>
+      <div className="homebanner" id="home">
+        <img src="/images/banner1.png" alt="Banner" />
       </div>
-      <section className="homePage">
-      
+      <div className="homePage">
         <div className="title">
           <label>Categories</label>
         </div>
@@ -38,8 +36,8 @@ function Home() {
             </div>
           </Link>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
