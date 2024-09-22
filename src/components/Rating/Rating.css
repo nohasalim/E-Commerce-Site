@@ -1,0 +1,28 @@
+
+.rating-div {
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+  
+  .rating-div .star {
+    font-size: 2rem;
+    color: lightgray;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .rating-div .star.filled {
+    color: gold;
+  }
+  
+  .rating-div .star.empty:hover,
+  .rating-div .star.empty:hover ~ .star {
+    color: gold;
+  }
+  

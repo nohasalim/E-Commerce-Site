@@ -67,7 +67,7 @@
   justify-content: center;
 }
 
-  .homediv,.cartdiv{
+  .homediv,.cartdiv,.logo-div{
     display: none;
   }
   
@@ -106,9 +106,10 @@
     .close-nav {
         display:block;
       }
-    .homediv ,.cartdiv{
+    .homediv ,.cartdiv,.logo-div{
         display:flex;
         align-items: center;
+        justify-content: center;
       }
   
     .navbar-links {
@@ -118,11 +119,13 @@
       width: 300px;;
       height: 100%;
       flex-direction: column;
+      justify-content:start;
+      gap:50px;
       align-items:center;
       padding: 20px;
       transition: left 0.3s;
       z-index: 1000;
-      background-color:white;
+      background-color:rgb(241, 236, 231);
     }
   
     .navbar-links.active {

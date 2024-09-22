@@ -314,12 +314,7 @@ textarea {
 .product-detail .actions input {
   padding: 5px;
 }
-.product-detail div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .product-detail div img {
   width: 50%;
 }

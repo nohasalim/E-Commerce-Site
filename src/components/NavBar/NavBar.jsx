@@ -24,6 +24,11 @@ function NavBar({ toggleSidebar }) {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
+      <div className="logo-div">
+        <img src="/images/Logo.png" alt="Logo" />
+        <h1>Furniro</h1>
+      </div>
+
       <div className="cartdiv">
         <button
           className="cart-button"
@@ -77,6 +82,7 @@ function NavBar({ toggleSidebar }) {
             Contact
           </NavLink>
         </div>
+
         <div>
           <button
             className="cart-button"

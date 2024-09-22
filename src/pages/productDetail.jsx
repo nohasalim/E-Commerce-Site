@@ -4,6 +4,7 @@ import useCartStore from "../store/cartStore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Breadcrumbs from "../components/Breadcrumb/Breadcrumb";
+import Rating from "../components/Rating/Rating"; // Import the Rating component
 
 function ProductDetail() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ function ProductDetail() {
   const handleAddToCart = (product) => {
     const quantity = quantities[product.id] || 1;
 
-    addToCart(product, quantity );
+    addToCart(product, quantity);
     toast.success(
       <div>
         <img
@@ -29,6 +30,7 @@ function ProductDetail() {
       { autoClose: 1000 } // Toast will disappear after 2 seconds
     );
   };
+
   const handleQuantityChange = (productId, event) => {
     const newQuantity = parseInt(event.target.value, 10);
     if (newQuantity > 0) {
@@ -38,6 +40,8 @@ function ProductDetail() {
       }));
     }
   };
+
+  
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -60,35 +64,46 @@ function ProductDetail() {
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  return (<>
-  <div className="banner-container">
-    <img className="banner-img" src="/images/banner2.png" alt="Banner" />
-    <Breadcrumbs/>{/* Add Breadcrumbs component here */}
-
-    </div>
-    <div className="product-detail">
-      <div>
-        <img src={product.image} alt={product.title} />
+  return (
+    <>
+      <div className="banner-container">
+        <img className="banner-img" src="/images/banner2.png" alt="Banner" />
+        <Breadcrumbs />
       </div>
-      <div>
-        <h3>{product.title}</h3>
-        <h3>Category: <span>{product.category}</span></h3>
-        <p>{`Price: $ ${product.price.toLocaleString("id-ID")}`}</p>
-        <h3>Description:</h3>
-        <p>{product.description}</p>
-        <div className="actions">
-          <input
-            type="number"
-            value={quantities[product.id] || 1}
-            onChange={(e) => handleQuantityChange(product.id, e)}
-            min="1"
-          />
-          <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+      <div className="product-detail">
+        <div>
+          <img src={product.image} alt={product.title} />
         </div>
+        <div>
+          <h3>{product.title}</h3>
+          <h3>
+            Category: <span>{product.category}</span>
+          </h3>
+          <h4>{`Price: $ ${product.price.toLocaleString("id-ID")}`}</h4>
+          <Rating
+            rating={product.rating.rate}
+            reviews={product.rating.count}
+          />
+          {/* Add Rating component */}
+          <h3>Description:</h3>
+
+          <p>{product.description}</p>
+
+          <div className="actions">
+            <input
+              type="number"
+              value={quantities[product.id] || 1}
+              onChange={(e) => handleQuantityChange(product.id, e)}
+              min="1"
+            />
+            <button onClick={() => handleAddToCart(product)}>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
-    </div></>
-    
+    </>
   );
 }
 
