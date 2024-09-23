@@ -83,7 +83,7 @@ function Electronics() {
         <div className="product">
           {currentProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <Link to={`/product/${product.id}`}>
+              <Link to={`/shop/${product.id}`}>
                 <img src={product.image} alt={product.title} />
                 <h4>{product.title}</h4>
                 <p>{`$ ${product.price.toLocaleString("id-ID")}`}</p>
