@@ -12,9 +12,12 @@
   height: 80px;
   width:100%;
 }
-.logo-div h1{
-  font-size: xx-large;
+.logo  h1,.logo-div h1{
+  font-size: x-large;
+  font-family: 'Segoe UI';
+
 }
+
 .navbar{
   position: fixed;
   top:0;

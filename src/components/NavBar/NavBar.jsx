@@ -26,7 +26,7 @@ function NavBar({ toggleSidebar }) {
       </button>
       <div className="logo-div">
         <img src="/images/Logo.png" alt="Logo" />
-        <h1>Furniro</h1>
+        <h1>ModaMix</h1>
       </div>
 
       <div className="cartdiv">
@@ -50,7 +50,7 @@ function NavBar({ toggleSidebar }) {
           <NavLink to="/">
             <div className="logo">
               <img src="/images/Logo.png" alt="Logo" />
-              <h1>Furniro</h1>
+              <h1>ModaMix</h1>
             </div>
           </NavLink>
         </div>
