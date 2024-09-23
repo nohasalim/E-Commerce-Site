@@ -36,12 +36,10 @@
 .homebanner {
   width: 100%;
   height: 300px;
-  object-fit: cover; /* Ensures the image covers the container without stretching */
 }
 .homebanner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the container without stretching */
 }
 
 /*page section style*/
@@ -204,12 +202,10 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:50px;
+  height:70px;
 }
-.homePage .title label {
+.homePage .title h1 {
   font-size: xx-large;
-  font-weight: bolder;
-  padding: 20px;
 }
 .homePage .categories {
   display: grid;

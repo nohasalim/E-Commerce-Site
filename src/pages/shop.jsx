@@ -59,7 +59,7 @@ function Shop() {
 
   return (
     <>
-      <div className="banner-container" id="shop">
+      <div className="banner-container">
         <img className="banner-img" src="/images/banner2.png" alt="Banner" />
         <div className="banner-title">
           <img src="/images/Logo.png" alt="Logo" />

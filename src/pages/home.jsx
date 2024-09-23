@@ -8,7 +8,7 @@ function Home() {
       </div>
       <div className="homePage">
         <div className="title">
-          <label>Categories</label>
+          <h1>Categories</h1>
         </div>
         <div className="categories">
           <Link to="/shop/electronics">
