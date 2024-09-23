@@ -1,5 +1,4 @@
-import { HashLink as NavLink } from 'react-router-hash-link';
-import { Outlet } from "react-router-dom";
+import { Outlet,NavLink } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
 import SideBarCart from "../components/SideBarCart/SideBarCart";
 import { useState } from "react";
@@ -46,25 +45,25 @@ function Layout() {
         <div>
           <label>Links</label>
           <div>
-            <NavLink smooth to="#home">Home</NavLink>
+            <NavLink  to="/home">Home</NavLink>
           </div>
           <div>
-            <NavLink smooth to="#shop">Shop</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </div>
           <div>
-            <NavLink smooth to="#contact">Contact</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </div>
         </div>
         <div>
           <label>Help</label>
           <div>
-            <NavLink smooth to="#payment-options">Payment Options</NavLink>
+            <NavLink  to="#">Payment Options</NavLink>
           </div>
           <div>
-            <NavLink smooth to="#returns">Returns</NavLink>
+            <NavLink to="#">Returns</NavLink>
           </div>
           <div>
-            <NavLink smooth to="#privacy-policies">Privacy Policies</NavLink>
+            <NavLink  to="#">Privacy Policies</NavLink>
           </div>
         </div>
         <div>

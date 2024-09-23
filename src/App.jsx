@@ -11,10 +11,12 @@ import Electronics from "./pages/electronics";
 import MenClothing from "./pages/men-clothing";
 import WomenClothing from "./pages/women-clothing";
 import CartPage from "./components/CartPage/CartPage";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} /> {/* Default route */}
