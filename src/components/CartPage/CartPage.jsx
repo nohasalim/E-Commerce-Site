@@ -49,7 +49,7 @@ function CartPage() {
                     <h5>{item.title}</h5>
                   </div>
                   <div>
-                    <p>{`$ ${item.price.toLocaleString("id-ID")}`}</p>
+                    <p>{`$${item.price.toLocaleString("id-ID")}`}</p>
                   </div>
                   <div>
                     <input
@@ -70,7 +70,7 @@ function CartPage() {
                 <h1>Cart Totals</h1>
                 <div className="cart-items3">
                   <p>Total : </p>
-                  <p>{`$ ${displayTotal.toLocaleString("id-ID")}`}</p>
+                  <p>{`$${displayTotal.toLocaleString("id-ID")}`}</p>
                 </div>
                 <button>Check Out</button>
               </div>
