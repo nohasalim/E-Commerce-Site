@@ -26,15 +26,18 @@ function SideBarCart({ closeSidebar }) {
 
   return (
     <div className="sidebar">
-      <button className="close-shopping-cart" onClick={handleCloseSidebar}>
-        ×
-      </button>
-      <h2 className="cart-header">Shopping Cart</h2>
+      <div className="sidebar-header">
+        <h2>Shopping Cart</h2>
+
+        <button className="close-shopping-cart" onClick={handleCloseSidebar}>
+          ×
+        </button>
+      </div>
 
       {cart.length === 0 ? (
         <div className="empty-cart-Img">
           <img src="/images/empty_cart1.png" alt="Empty Cart" />
-          <Link to="/shop"  onClick={handleCloseSidebar}>
+          <Link to="/shop" onClick={handleCloseSidebar}>
             <button>Go Shopping</button>
           </Link>
         </div>
@@ -45,31 +48,26 @@ function SideBarCart({ closeSidebar }) {
               <div className="cart-element" key={item.id}>
                 <div>
                   <img src={item.image} alt={item.title} />
+                </div>
+                <div>
                   <h5>{item.title}</h5>
+                  <p>{`${item.quantity} x $${item.price.toLocaleString(
+                    "id-ID"
+                  )}`}</p>
                 </div>
                 <div>
-                  <p>{`$ ${item.price.toLocaleString("id-ID")}`}</p>
+                  <button onClick={() => removeFromCart(item.id)}>x</button>
                 </div>
-                <div>
-                  <input
-                    type="number"
-                    value={item.quantity}
-                    onChange={(e) => handleQuantityChange(item.id, e)}
-                    min="1"
-                  />
-                </div>
-                <button onClick={() => removeFromCart(item.id)}>
-                  x
-                </button>
               </div>
             ))}
           </div>
           <div className="sidebar-footer">
-            <h2>
-              Total :<span>{` $ ${displayTotal.toLocaleString("id-ID")}`}</span>
-            </h2>
+            <div className="total-div">
+              <h2>Total :</h2>
+              <span>{` $${displayTotal.toLocaleString("id-ID")}`}</span>
+            </div>
 
-            <Link to="/cartpage"  onClick={handleCloseSidebar}>
+            <Link to="/cartpage" onClick={handleCloseSidebar}>
               <button className="cart-btn">Cart</button>
             </Link>
           </div>
