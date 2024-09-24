@@ -5,17 +5,12 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 function SideBarCart({ closeSidebar }) {
-  const { cart, removeFromCart, updateQuantity, getTotal } = useCartStore();
+  const { cart, removeFromCart, getTotal } = useCartStore();
   const total = getTotal();
   const displayTotal = isNaN(total) ? 0 : total;
   const [isVisible, setIsVisible] = useState(true);
 
-  const handleQuantityChange = (productId, event) => {
-    const newQuantity = parseInt(event.target.value, 10);
-    if (newQuantity > 0) {
-      updateQuantity(productId, newQuantity);
-    }
-  };
+ 
 
   const handleCloseSidebar = () => {
     setIsVisible(false);
