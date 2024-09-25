@@ -82,8 +82,19 @@ function WomenClothing() {
         <div className="product">
           {currentProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <Link to={`/shop/${product.id}`}>
+              <div className="image-container">
                 <img src={product.image} alt={product.title} />
+                <div className="overlay-card">
+                  <button
+                    className="add-to-cart"
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+
+              <Link to={`/shop/${product.id}`}>
                 <h4>{product.title}</h4>
                 <p>{`$ ${product.price.toLocaleString("id-ID")}`}</p>
               </Link>
@@ -94,9 +105,7 @@ function WomenClothing() {
                   onChange={(e) => handleQuantityChange(product.id, e)}
                   min="1"
                 />
-                <button onClick={() => handleAddToCart(product)}>
-                  Add to Cart
-                </button>
+                
               </div>
             </div>
           ))}

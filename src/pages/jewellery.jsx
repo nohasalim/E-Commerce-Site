@@ -17,7 +17,7 @@ function Jewellery() {
 
   const handleAddToCart = (product) => {
     const quantity = quantities[product.id] || 1;
-    addToCart(product, quantity );
+    addToCart(product, quantity);
     toast.success(
       <div>
         <img
@@ -75,17 +75,28 @@ function Jewellery() {
   return (
     <>
       <div className="banner-container">
-      <img className="banner-img" src="/images/banner2.png" alt="Banner" />
-      <Breadcrumbs/>{/* Add Breadcrumbs component here */}
-
+        <img className="banner-img" src="/images/banner2.png" alt="Banner" />
+        <Breadcrumbs />
+        {/* Add Breadcrumbs component here */}
       </div>
 
       <div className="shop-page">
         <div className="product">
           {currentProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <Link to={`/shop/${product.id}`}>
+              <div className="image-container">
                 <img src={product.image} alt={product.title} />
+                <div className="overlay-card">
+                  <button
+                    className="add-to-cart"
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+
+              <Link to={`/shop/${product.id}`}>
                 <h4>{product.title}</h4>
                 <p>{`$ ${product.price.toLocaleString("id-ID")}`}</p>
               </Link>
@@ -96,9 +107,6 @@ function Jewellery() {
                   onChange={(e) => handleQuantityChange(product.id, e)}
                   min="1"
                 />
-                <button onClick={() => handleAddToCart(product)}>
-                  Add to Cart
-                </button>
               </div>
             </div>
           ))}
