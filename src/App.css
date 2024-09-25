@@ -203,7 +203,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:70px;
+  height: 70px;
 }
 .homePage .title h1 {
   font-size: xx-large;
@@ -238,7 +238,7 @@ textarea {
 
 .product {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
   align-items: center;
@@ -254,7 +254,7 @@ textarea {
 }
 .product-card {
   position: relative;
-    display: inline-block;
+  display: inline-block;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -309,18 +309,7 @@ textarea {
   border-radius: 5px;
 }
 
-.actions button {
-  padding: 10px 20px;
-  border: none;
-  background-color: rgb(245, 202, 147);
-  color: white;
-  cursor: pointer;
-  border-radius: 4px;
-}
 
-.actions button:hover {
-  background-color: rgb(224, 159, 73);
-}
 
 /* ProductDetails page style*/
 
@@ -353,7 +342,7 @@ textarea {
 .product-detail div button:hover {
   background-color: rgb(224, 159, 73);
 }
-.content{
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,7 +371,7 @@ textarea {
   footer {
     display: grid;
     grid-template-columns: auto auto;
-    height:800px;
+    height: 800px;
     padding: 20px;
   }
   .copyRight {
@@ -424,12 +413,11 @@ textarea {
   .homePage {
     height: 800px;
   }
-  
 
   .homePage .categories {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:0px;
+    gap: 0px;
     padding: 20px;
   }
 }
@@ -437,16 +425,14 @@ textarea {
 @media only screen and (max-width: 600px) {
   /* layout page style*/
 
-  
-  
   footer {
     display: grid;
     grid-template-columns: auto;
-    gap:0px;
+    gap: 0px;
     height: 800px;
     padding: 20px;
   }
-  footer div{
+  footer div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -458,20 +444,19 @@ textarea {
     height: 1700px;
     padding: 20px;
   }
-  
+
   .homePage .categories {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     height: 90%;
   }
-  .product{
+  .product {
     display: flex;
     flex-direction: column;
-    
   }
   /* ProductDetails page style*/
   .product-detail {
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 20px;
   }
