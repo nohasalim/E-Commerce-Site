@@ -10,8 +10,6 @@ function SideBarCart({ closeSidebar }) {
   const displayTotal = isNaN(total) ? 0 : total;
   const [isVisible, setIsVisible] = useState(true);
 
- 
-
   const handleCloseSidebar = () => {
     setIsVisible(false);
     closeSidebar();
@@ -41,15 +39,18 @@ function SideBarCart({ closeSidebar }) {
           <div className="cart-elements">
             {cart.map((item) => (
               <div className="cart-element" key={item.id}>
-                <div>
-                  <img src={item.image} alt={item.title} />
+                <div  className="cart-element">
+                  <div>
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div>
+                    <h5>{item.title}</h5>
+                    <p>{`${item.quantity} x $${item.price.toLocaleString(
+                      "id-ID"
+                    )}`}</p>
+                  </div>
                 </div>
-                <div>
-                  <h5>{item.title}</h5>
-                  <p>{`${item.quantity} x $${item.price.toLocaleString(
-                    "id-ID"
-                  )}`}</p>
-                </div>
+
                 <div>
                   <button onClick={() => removeFromCart(item.id)}>x</button>
                 </div>

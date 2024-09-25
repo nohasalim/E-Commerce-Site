@@ -35,7 +35,7 @@ function Layout() {
       </div>
       <footer>
         <div>
-          <h3>Funiro.</h3>
+          <h3>ModaMix.</h3>
           <label>
             400 University Drive Suite 200 Coral Gables,
             <br />
@@ -75,6 +75,7 @@ function Layout() {
         </div>
       </footer>
       <div className="copyRights">
+        <p> 2024 ModaMix.All Rights Reserved</p>
         <p>Developed By : Eng\ Noha AbdAllah Salim @2024</p>
       </div>
     </main>
