@@ -40,7 +40,7 @@
 .homebanner img {
   width: 100%;
   height: 100%;
-    object-fit: contain; /* Ensures the image covers the container without stretching */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
 
 }
 
