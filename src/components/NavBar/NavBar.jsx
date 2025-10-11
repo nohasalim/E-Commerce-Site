@@ -24,10 +24,18 @@ function NavBar({ toggleSidebar }) {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
-      <div className="logo-div">
-        <img src="/images/Logo.png" alt="Logo" />
-        <h1>ModaMix</h1>
-      </div>
+      <NavLink
+        to="/"
+        onClick={closeNav}
+        className={({ isActive }) =>
+          `toggle-button ${isActive ? "active" : ""}`
+        }
+      >
+        <div className="logo">
+          <img src="/images/Logo.png" alt="Logo" />
+          <h1>MODAMIX</h1>
+        </div>
+      </NavLink>
 
       <div className="cartdiv">
         <button
@@ -45,17 +53,17 @@ function NavBar({ toggleSidebar }) {
         <button className="close-nav" onClick={closeNav}>
           ×
         </button>
-
-        <div>
-          <NavLink to="/">
-            <div className="logo">
-              <img src="/images/Logo.png" alt="Logo" />
-              <h1>ModaMix</h1>
-            </div>
-          </NavLink>
-        </div>
-
-        <div>
+        <NavLink
+          to="/"
+          onClick={closeNav}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <div className="logo">
+            <img src="/images/Logo.png" alt="Logo" />
+            <h1>MODAMIX</h1>
+          </div>
+        </NavLink>
+        <div className="links">
           <NavLink
             to="/home"
             onClick={closeNav}
@@ -63,8 +71,6 @@ function NavBar({ toggleSidebar }) {
           >
             Home
           </NavLink>
-        </div>
-        <div>
           <NavLink
             to="/shop"
             onClick={closeNav}
@@ -72,8 +78,6 @@ function NavBar({ toggleSidebar }) {
           >
             Shop
           </NavLink>
-        </div>
-        <div>
           <NavLink
             to="/contact"
             onClick={closeNav}
@@ -83,18 +87,16 @@ function NavBar({ toggleSidebar }) {
           </NavLink>
         </div>
 
-        <div>
-          <button
-            className="cart-button"
-            onClick={() => {
-              closeNav();
-              toggleSidebar();
-            }}
-          >
-            <img src="/images/cart.png" alt="Cart" />
-            <span className="cart-counter">{displayCartCount}</span>
-          </button>
-        </div>
+        <button
+          className="cart-button"
+          onClick={() => {
+            closeNav();
+            toggleSidebar();
+          }}
+        >
+          <img src="/images/cart.png" alt="Cart" />
+          <span className="cart-counter">{displayCartCount}</span>
+        </button>
       </div>
     </nav>
   );

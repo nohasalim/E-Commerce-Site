@@ -2,47 +2,54 @@
 /*navbar style*/
 
 .navbar,
-.logo ,.navbar-links,.logo-div{
+.logo,
+.navbar-links,
+.logo-div {
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   box-sizing: border-box;
   padding: 0px 20px;
   margin: 0px;
   height: 80px;
-  width:100%;
+  width: 100%;
 }
-.logo  h1,.logo-div h1{
-  font-size: x-large;
-  font-family: 'Segoe UI';
-
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo h1,
+.logo-div h1 {
+  font-family: "Segoe UI";
+  color: #312e2e;
 }
 
-.navbar{
+.navbar {
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 1000;
   overflow: hidden; /* Ensures no overflow */
-  background-color:white;
+  background-color: white;
 }
-.logo img{
+.logo img {
   width: 50px;
   height: 50px;
   margin-right: 5px;
 }
 .navbar .active {
-  color:rgb(224, 159, 73);;
+  color: rgb(224, 159, 73);
 }
 .navbar a {
   text-decoration: none;
-  color: black;
-  font-size:x-large;
+  color: #312e2e;
+  font-size: large;
   cursor: pointer;
   padding: 5px;
   border-radius: 10px;
 }
-.navbar a:hover{
-  color:rgb(224, 159, 73);;
+.navbar a:hover {
+  color: rgb(224, 159, 73);
 }
 .cart-button {
   position: relative;
@@ -73,76 +80,73 @@
   justify-content: center;
 }
 
-  .homediv,.cartdiv,.logo-div{
-    display: none;
-  }
-  
+.homediv,
+.cartdiv,
+.logo-div {
+  display: none;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+.close-nav {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: rgb(224, 159, 73);
+  cursor: pointer;
+}
+.close-nav:hover {
+  color: aliceblue;
+  background-color: rgb(224, 159, 73);
+}
+@media (max-width: 600px) {
   .toggle-button {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .toggle-button .bar {
-    width: 25px;
-    height: 3px;
-    background-color:black; 
-    margin: 4px 0;
+    display: flex;
   }
   .close-nav {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color:rgb(224, 159, 73); 
-    cursor: pointer;
+    display: block;
   }
-  .close-nav:hover{
-    color: aliceblue;
-    background-color:rgb(224, 159, 73); 
+  .homediv,
+  .cartdiv,
+  .logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .navbar-links {
+    position: fixed;
+    left: -70%;
+    top: 0px;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 50px;
+    align-items: center;
+    padding: 20px;
+    transition: left 0.3s;
+    z-index: 1000;
+    background-color: rgb(241, 236, 231);
   }
-  @media (max-width: 600px) {
-    .toggle-button {
-      display: flex;
-    }
-    .close-nav {
-        display:block;
-      }
-    .homediv ,.cartdiv,.logo-div{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-      }
-  
-    .navbar-links {
-      position:fixed;
-      left: -70%;
-      top:0px;
-      width:70%;
-      height: 100%;
-      flex-direction: column;
-      justify-content:start;
-      gap:50px;
-      align-items:center;
-      padding: 20px;
-      transition: left 0.3s;
-      z-index: 1000;
-      background-color:rgb(241, 236, 231);
-    }
-  
-    .navbar-links.active {
-      left: 0;
-    }
-  
-    .navbar-links a {
-    
-      padding: 10px 0;
-      width: 100%;
-      text-align: left;
-    }
+  .links {
+    flex-direction: column;
   }
-  
+  .navbar-links.active {
+    left: 0;
+  }
+}
